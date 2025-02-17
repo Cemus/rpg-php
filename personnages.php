@@ -17,8 +17,8 @@ abstract class Personnage{
     abstract function afficher():void;
 
     function attaquer():void{
-        echo "<p>J'attaque</p>";
-       $this->arme->attaquer();
+        echo "<p>".$this->nom." attaque !</p>";
+        $this->arme->attaquer();
     }
 
     function getNom():string{
@@ -61,7 +61,7 @@ class Magicien extends Personnage{
 
     public function afficher():void{
         echo "
-        <img src = 'https://ih1.redbubble.net/image.4674612568.0346/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg' alt='Mage'
+        <img src = 'https://ih1.redbubble.net/image.4674612568.0346/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg' alt='Mage'/>
         </br>
         <p>Maaaage</p>";
     }
@@ -73,7 +73,7 @@ class Magicien extends Personnage{
         $arme = $this->getArme();
         $arme->attaquer();
         if ($this->mana <= 0){
-            echo "<p>UGH, je tombe inconscient";
+            echo "<p>UGH, je tombe inconscient</p>";
         }
     }
 }

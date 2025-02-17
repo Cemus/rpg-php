@@ -26,6 +26,7 @@ class Epee implements InterfaceArme{
         if ($jetDurabilite <= 10){
             $this->diminuerDurabilite();
         }
+        echo "<p>Il inflige ".$jetPuissance ." points de dégats.</p>";
         return $jetPuissance;
     }
 
@@ -78,7 +79,7 @@ class ProjectileMagique implements InterfaceArme{
 
     public function attaquer():int{
         $jetPuissance = rand(1,100);
-        echo "Il inflige ".$jetPuissance." points de dégats.";
+        echo "<p>Il inflige ".$jetPuissance." points de dégats.</p>";
         return $jetPuissance;
     }
 }
