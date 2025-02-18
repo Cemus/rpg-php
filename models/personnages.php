@@ -1,8 +1,6 @@
 <?php
 
 include "./armes.php";
-
-
 abstract class Personnage{
     private string $nom;
     private InterfaceArme $arme;

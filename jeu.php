@@ -1,8 +1,7 @@
 <?php
 session_start();
-include "./personnages.php";
+include "./models/personnages.php";
 
-// Vérifie si les personnages existent déjà dans la session
 if (!isset($_SESSION['mage'])) {
     $projectile = new ProjectileMagique("Projectile");
     $mage = new Magicien("Jean", $projectile, $type="Magicien");
@@ -18,19 +17,9 @@ if (!isset($_SESSION['guerrier'])) {
 } else {
   $guerrier = unserialize($_SESSION['guerrier']);
 }
-
-
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>RPG - Jeu</title>
-</head>
-<body>
+<?php include "./layout/meta.php" ?>
     <h1>Combats RPG</h1>
 
 
