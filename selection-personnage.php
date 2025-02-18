@@ -1,4 +1,9 @@
 
+<?php
+include "./models/armes.php";
+
+?>
+
 <?php include "./layout/meta.php"; ?>
 
 <header>    
@@ -41,6 +46,5 @@
 
     <button type="submit">Créer</button>
 </form>
-
 
 <?php include "./layout/footer.php"; ?>

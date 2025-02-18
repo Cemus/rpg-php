@@ -35,3 +35,15 @@ button {
   background-color: none;
   cursor: pointer;
 }
+
+.battlefield {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.healthbar {
+  width: 100%;
+  height: 1rem;
+  background-color: red;
+}

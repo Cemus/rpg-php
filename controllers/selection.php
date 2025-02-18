@@ -5,7 +5,6 @@ include "../models/personnages.php";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nom = htmlspecialchars($_POST["nom"]);
     $perso = $_POST["perso"];
-
     $epee = new Epee(5,5,"Epee de bois"); 
     $arc = new Arc(5,5,"Arc en bois"); 
     $magie = new ProjectileMagique("Projectiles lambda"); 
@@ -27,6 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     session_start();
     $_SESSION["personnage"] = serialize($personnage);
-    header("Location: personnage.php"); 
+    if (isset($_SESSION["personnage"])) {
+        header("Location: ../jeu.php"); 
+    }
     exit;
 }

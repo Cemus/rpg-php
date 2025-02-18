@@ -1,10 +1,11 @@
 <?php
 
-include "./armes.php";
+
 abstract class Personnage{
     private string $nom;
     private InterfaceArme $arme;
     private string $type;
+    private int $hp;
 
     function __construct(string $nom, InterfaceArme $arme, string $type){
         $this->nom = $nom;
@@ -31,6 +32,10 @@ abstract class Personnage{
         return $this->type;
     }
 
+    function getHp():int{
+        return $this->hp;
+    }
+
     function setNom(string $newNom):self{
         $this->nom = $newNom;
         return $this;
@@ -43,6 +48,11 @@ abstract class Personnage{
 
     function setType(string $newType):self{
         $this->type = $newType;
+        return $this;
+    }
+
+    function setHp(int $newHp):self{
+        $this->hp = $newHp;
         return $this;
     }
 }
